@@ -61,4 +61,15 @@ for(let i=0; i<btns.length; i++){
     })
 }
 
+let counts =0;
+const copyCount = document.getElementById("copy-count");
 
+function copyNumber (btn){
+    let num = btn.parentElement.parentElement.querySelector(".call-number").innerText;
+    alert("Number copied " + num);
+
+    navigator.clipboard.writeText(num);
+
+    counts++
+    copyCount.innerText = counts;
+}
