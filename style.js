@@ -1,11 +1,12 @@
 function addHeart (){
-    const heartCount = document.getElementById("heart-count");
+    const heartCount =document.getElementById("heart-count");
     const cardContainer = document.querySelector(".card-container");
 
     let count = parseInt(heartCount.innerText);
-    count++;
-    heartCount.innerText = count
+    count++
+    heartCount.innerText = count;
 }
+
 
 const btns = document.getElementsByClassName("call-btn");
 const history = document.getElementById("history-container");
@@ -60,15 +61,4 @@ for(let i=0; i<btns.length; i++){
     })
 }
 
-let counts = 0;
-const copyCount = document.getElementById("copy-count");
-function copyNumber (btn){
-    
-    let num = btn.parentElement.parentElement.querySelector(".call-number").innerText;
-    alert("Number Copied" + num);
 
-    navigator.clipboard.writeText(num);
-
-    counts++
-    copyCount.innerText = counts;
-}
